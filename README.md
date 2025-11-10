@@ -121,6 +121,7 @@ geth \
  --http --http.addr 0.0.0.0 --http.port 8545 --http.api eth,net,web3,clique \
  --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.api eth,net,web3,clique \
  --allow-insecure-unlock
+```
 
 ### 6. Confirm Validator Status
 
