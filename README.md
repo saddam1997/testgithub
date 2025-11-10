@@ -64,3 +64,31 @@ This outputs:
 
 Copy the generated address. This address will be added to the authorized signer list.
 
+
+### 3. Authorize the New Validator
+
+On any existing validator:
+
+#### 1. Attach to the running node:
+
+```bash
+geth attach http://localhost:8545
+```
+
+#### 2. Propose the new validator address:
+
+
+```bash
+clique.propose("0xNEW_VALIDATOR_ADDRESS", true)
+
+```
+
+#### 3. Confirm once it appears in the signer list:
+
+
+```bash
+clique.getSigners()
+
+```
+
+
