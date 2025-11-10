@@ -35,3 +35,32 @@ Checkout [INSTALL](INSTALL.txt) for installation instructions.
 | P2P Port                    | 10848   |
 | RPC Port                    | 8545  |
 | WSS Port                    | 8546  |
+
+
+## Adding a New Validator to the VuneCoin Blockchain
+
+Follow the steps below to add a new validator to the VuneCoin Clique PoA network.
+
+### 1. Prerequisites
+
+Ensure the new validator server has:
+
+- Geth installed (same version as existing validators)
+- Access to `genesis.json`, `static-nodes.json`, and `trusted-nodes.json`
+- Network connectivity to at least one existing validator
+
+### 2. Generate a New Validator Key
+
+On the new validator machine:
+
+```bash
+geth account new --datadir ./data
+
+```
+This outputs:
+
+- **Address** (validator address)
+- **Keystore file** located at `./data/keystore`
+
+Copy the generated address. This address will be added to the authorized signer list.
+
