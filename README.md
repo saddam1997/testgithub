@@ -91,4 +91,16 @@ clique.getSigners()
 
 ```
 
+### 4. Configure the New Validator Node
+
+Update the following files on the new validator:
+
+- **static-nodes.json**  
+  Add the enode URLs of all existing validators.
+
+- **trusted-nodes.json**  
+  Use the same entries as `static-nodes.json`.
+
+- **genesis.json**  
+  Must be identical to the main network genesis file.
 
