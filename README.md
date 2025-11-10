@@ -104,3 +104,22 @@ Update the following files on the new validator:
 - **genesis.json**  
   Must be identical to the main network genesis file.
 
+### 5. Start the New Validator Node
+
+Run the node with validator flags:
+
+```bash
+geth \
+ --datadir ./data \
+ --networkid 6226 \
+ --syncmode full \
+ --mine \
+ --miner.etherbase 0xNEW_VALIDATOR_ADDRESS \
+ --unlock 0xNEW_VALIDATOR_ADDRESS \
+ --password password.txt \
+ --port 10848 \
+ --http --http.addr 0.0.0.0 --http.port 8545 --http.api eth,net,web3,clique \
+ --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.api eth,net,web3,clique \
+ --allow-insecure-unlock
+
+
