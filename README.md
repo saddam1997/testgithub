@@ -78,7 +78,7 @@ geth attach http://localhost:8545
 #### 2. Propose the new validator address:
 
 
-```bash
+```javascript
 clique.propose("0xNEW_VALIDATOR_ADDRESS", true)
 
 ```
@@ -86,7 +86,7 @@ clique.propose("0xNEW_VALIDATOR_ADDRESS", true)
 #### 3. Confirm once it appears in the signer list:
 
 
-```bash
+```javascript
 clique.getSigners()
 
 ```
@@ -122,4 +122,10 @@ geth \
  --ws --ws.addr 0.0.0.0 --ws.port 8546 --ws.api eth,net,web3,clique \
  --allow-insecure-unlock
 
+### 6. Confirm Validator Status
+
+Once the node has fully synced, run the following command:
+
+```javascript
+clique.getSigners()
 
